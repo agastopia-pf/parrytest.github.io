@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOOMPARRY // 3D Feed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <section id="hud">
+      <div class="hud-title">DOOMPARRY UPLINK</div>
+      <div class="hud-row"><span>RANK</span><strong id="styleRank">E</strong></div>
+      <div class="hud-row"><span>SCORE</span><strong id="score">000000</strong></div>
+      <div class="hud-row"><span>PARRY CHAIN</span><strong id="combo">x0</strong></div>
+      <div class="bar-wrap">
+        <div class="bar-label">SUIT INTEGRITY</div>
+        <div class="bar"><div id="healthBar"></div></div>
+      </div>
+      <p class="hint">Mouse = aim feed • RMB/SPACE = parry pulse</p>
+    </section>
+
+    <section id="feedCard">
+      <div class="feed-head">[ LIVE COMBAT SCREENSHARE ]</div>
+      <div id="renderRoot"></div>
+      <div id="crosshair"></div>
+      <div id="crtScan"></div>
+    </section>
+
+    <section id="centerPrompt">
+      <h1>DOOMPARRY_3D</h1>
+      <p>Reflect hellfire in the live feed. Shoot it back into red demons.</p>
+      <button id="startBtn">INIT FEED</button>
+    </section>
+
+    <div id="flash"></div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
