@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOOMPARRY // 2.5D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <section id="hud">
+      <div class="title">DOOMPARRY // UPLINK</div>
+      <div class="stat"><span>RANK</span><strong id="styleRank">E</strong></div>
+      <div class="stat"><span>SCORE</span><strong id="score">000000</strong></div>
+      <div class="stat"><span>WAVE</span><strong id="wave">01</strong></div>
+      <div class="stat"><span>PARRY CHAIN</span><strong id="combo">x0</strong></div>
+      <div class="bar-wrap">
+        <div class="bar-label">INTEGRITY</div>
+        <div class="bar"><div id="healthBar"></div></div>
+      </div>
+      <p class="hint">Aim: mouse • Parry: <span id="parryBindLabel">RMB / Space</span></p>
+      <button id="settingsToggle" class="small-btn">SETTINGS</button>
+    </section>
+
+    <section id="feedCard">
+      <div class="feed-head">[ LIVE FEED // 2.5D COMBAT ]</div>
+      <div id="renderRoot"></div>
+      <div id="crosshair"></div>
+      <div id="crt"></div>
+      <div id="vignette"></div>
+    </section>
+
+    <section id="centerPrompt">
+      <h1>DOOMPARRY_2.5D</h1>
+      <p>Parry hellfire at the perfect frame, reflect it, survive the wave.</p>
+      <button id="startBtn">INIT RUN</button>
+    </section>
+
+    <section id="settingsPanel" class="hidden">
+      <h2>SETTINGS</h2>
+      <label class="row">
+        <span>Parry Key</span>
+        <button id="rebindBtn" class="small-btn">REBIND</button>
+      </label>
+      <label class="row">
+        <span>Hit-Stop (ms)</span>
+        <input id="hitstopInput" type="range" min="0" max="180" value="90" />
+      </label>
+      <label class="row">
+        <span>Master Volume</span>
+        <input id="volumeInput" type="range" min="0" max="100" value="80" />
+      </label>
+      <p id="settingsStatus">Audio: looking for local files in <code>sounds/</code>.</p>
+      <button id="closeSettings" class="small-btn">CLOSE</button>
+    </section>
+
+    <div id="impactFrame"></div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
